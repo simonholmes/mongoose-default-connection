@@ -1,10 +1,7 @@
 var http = require('http'),
-    db = require('./model/db');
+    db = require('./model/db'),
+    pages = require('./pages');
 
 http.createServer(function (req, res) {
-  res.writeHead(200, {
-  'Content-Type': 'text/plain'
-  });
- res.write('Hello world');
-  res.end();
+  pages.index(req, res);
 }).listen(8888, '127.0.0.1');

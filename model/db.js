@@ -34,9 +34,4 @@ process.on('SIGINT', function() {
 
 // BRING IN YOUR SCHEMAS & MODELS
 // For example
-var teamSchema = new mongoose.Schema({
-  Country: String,
-  GroupName: String
-});
-
-var Team = mongoose.model('Team', teamSchema);
+require('./../model/team');
