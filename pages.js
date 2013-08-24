@@ -7,14 +7,18 @@ exports.index = function (req, res) {
     GroupName: "D",
     CreatedOn: Date.now()
   }, function(err, team) {
+    var strOutput;
+    res.writeHead(200, {
+      'Content-Type': 'text/plain'
+    });
     if (err) {
       console.log(err);
+      strOutput = 'Oh dear, we\'ve got an error';
     } else {
-      res.writeHead(200, {
-        'Content-Type': 'text/plain'
-      });
-     res.write(team.Country + ' created in Group ' + team.GroupName + '\n' + 'at ' + team.CreatedOn);
-     res.end();
+      console.log('Team created: ' + team);
+      strOutput = team.Country + ' created in Group ' + team.GroupName + '\n' + 'at ' + team.CreatedOn;
     }
+    res.write(strOutput);
+    res.end();
   });
 };
