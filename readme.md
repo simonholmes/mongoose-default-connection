@@ -11,3 +11,5 @@ All of the relevant code is in /model/db.js.
 `app.js` is just a minimal Node.js skeleton, rendering a page defined in `pages.js`. `pages.js` brings in Mongoose and the model defined in `/model/team.js`.
 
 This only requires Mongoose in the application, as noted in package.json. If you download this you can install Mongoose into the application by running `npm install`
+
+More detailed discussion around using this is available on my blog: [http://theholmesoffice.com/mongoose-connection-best-practice/](http://theholmesoffice.com/mongoose-connection-best-practice/)
