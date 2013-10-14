@@ -6,4 +6,4 @@ var teamSchema = new mongoose.Schema({
   CreatedOn: Date
 });
 
-var Team = mongoose.model('Team', teamSchema);
+var Team = module.exports = mongoose.model('Team', teamSchema);
